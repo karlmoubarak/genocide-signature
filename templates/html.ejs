@@ -1,0 +1,65 @@
+<footer>
+
+  <style>
+    :root {
+      --death-count: <%= DEATH_COUNT %>;
+    }
+    #statement {
+      max-width: 600px;
+      padding: 10px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: calc();
+      color: rgb(0, 105, 0);
+      border: 2px groove;
+    }
+    #statement p:first-of-type { margin-block-start: 0; }
+    #statement p:last-of-type { margin-block-end: 0; }
+    #statement a {
+      color: darkred;
+    }
+    #statement #intro, #divider {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    #statement details summary {
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+    #statement details[open] summary {
+      margin-bottom: 10px;
+    }
+    #statement #deaths {
+      font-size: 12px;
+      text-align: justify;
+    }
+  </style>
+
+  <section id="statement">
+
+    <p id="intro">At least <%= DEATH_COUNT.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> Palestinians have been killed in Gaza since October 7, 2023.</p>
+    <details open>
+      <summary>Unfolded here are olive branches for each of them.</summary>
+      <p id="deaths">
+        <% for (let i = 0; i < DEATH_COUNT; i++) { %>
+          🫒
+        <% } %>
+      </p>
+    </details>
+
+    <p id="divider">~</p>
+
+    <p>There is an ongoing genocide against the Palestinian people.</p>
+
+    <p>Over <%= MONTH_COUNT %> months later, the terrorist Zionist apartheid regime continues to inflict Western state-sponsored violence against the Palestinian and Lebanese people, continuously violating international humanitarian law, international wartime law, the <a href="https://www.icj-cij.org/case/186">International Court of Justice's July 2024 ruling</a> that further criminalises illegal Israeli occupation of Palestinian land, the <a href="https://press.un.org/en/2024/sc15723.doc.htm">United Nations Security Council resolution 2735 (2024)</a> calling for a ceasefire in Gaza and the Occupied West Bank as well as the <a href="https://digitallibrary.un.org/record/581053?v=pdf">United Nations Security Council resolution 1701 (2006)</a> calling for withdrawal of Israeli forces from Lebanese territory. This is only to name a few violations.</p>
+
+    <p>This is not only happening in front of our eyes, but we also continue to be passively complicit in it. Consider boycotting and calling for divestment and sanctions against Israel. Understand where and how your local, regional and national governments support Israel and use your vote and political agency to call for an end to this support. Donate to healthcare organisations and humanitarian causes doing work in the region. Inform your friends and relatives and have open discussions about this. Protest, strike and regroup. Most importantly, do not vilify armed or militant resistance, as that is the last resort after diplomatic means fail to result in "peace". Diplomatic efforts have failed; resistance is justified when people are occupied.</p>
+
+    <p>This email signature sources its data from <a href="https://data.techforpalestine.org/">data.techforpalestine.org</a>, is updated daily and may change in appearance as time passes.</p>
+
+    <p>No Justice, No Peace!</p>
+
+  </section>
+
+</footer>
