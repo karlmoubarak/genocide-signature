@@ -8,7 +8,7 @@ const {
   SIGNATURE_PATH_TEXT,
 } = process.env
 
-console.log('API_URL: ', API_URL)
+console.log('API_URL:', API_URL)
 console.log('SIGNATURE_PATH_HTML:', SIGNATURE_PATH_HTML)
 console.log('SIGNATURE_PATH_TEXT:', SIGNATURE_PATH_TEXT)
 
